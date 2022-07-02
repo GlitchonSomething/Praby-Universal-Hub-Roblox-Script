@@ -46,9 +46,26 @@ tool.Parent = game.Players.LocalPlayer.Backpack
         loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Rippeed/DaHoodinary/main/chariotsware"))()
     end)
 
-    GamesSection:NewButton("Hoop Central 6", "Only shooting hack works", function()
+    GamesSection:NewButton("Hoop Central 6", "Only shooting hack works (I got banned using this)", function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ghostywinsgg/gtfhstd/main/krabs",true))();
     end)
-	
-	
 
+    GamesSection:NewButton("Da Hood", "Swag X with aim lock tp and more", function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/lerkermer/lua-projects/master/SwagModeV002'))()
+    end)
+
+    GamesSection:NewButton("Tower Of Hell", "Tower of hell script with inf jump fly and more", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/iiProductionz/Floater-Scripts/main/WaifuEdition/Tower%20Of%20Hell"))()
+    end)
+
+    GamesSection:NewButton("Tower Of Misery", "Tower of misery script with inf jump fly and more", function()
+        pcall(loadstring(game:HttpGet("https://pastebin.com/raw/W73fQ7wZ")))
+    end)
+
+    GamesSection:NewButton("Arsenal", "Aresnal script with aimbot inf jump and kill all", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/TR1V5/TR1V5-V3/main/Main"))()
+    end)
+
+    GamesSection:NewButton("Strucid", "The roblox fortnite hack lmao", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/fusiongreg/BoltsHubV5/main/Main", true))()
+    end)
