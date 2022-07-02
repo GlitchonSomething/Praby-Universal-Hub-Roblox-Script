@@ -1,0 +1,54 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Praby's Universal Hub", "DarkTheme")
+    -- MAIN
+    local Main = Window:NewTab("Main")
+    local MainSection = Main:NewSection("Main")
+
+
+    MainSection:NewButton("Inf Yeild", "A hub with FE scripts", function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+    end)
+
+    MainSection:NewButton("Anti AFK", "Won't kick you out of games", function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/sDXcYFhR", true))()
+    end)
+
+    MainSection:NewButton("Click TP Tool", "Will give a tool to TP", function()
+        mouse = game.Players.LocalPlayer:GetMouse()
+tool = Instance.new("Tool")
+tool.RequiresHandle = false
+tool.Name = "Click Teleport"
+tool.Activated:connect(function()
+local pos = mouse.Hit+Vector3.new(0,2.5,0)
+pos = CFrame.new(pos.X,pos.Y,pos.Z)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
+end)
+tool.Parent = game.Players.LocalPlayer.Backpack
+    end)
+
+
+    --LOCAL PLAYER
+    local Player = Window:NewTab("Player")
+    local PlayerSection = Player:NewSection("Player")
+
+    PlayerSection:NewSlider("Walkspeed", "How fast you can run", 500, 16, function(s)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+    end)
+
+    PlayerSection:NewSlider("Jumppower", "How high you can jump", 350, 50, function(s)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+    end)
+
+    local Games = Window:NewTab("Games")
+    local GamesSection = Games:NewSection("Games")
+
+    GamesSection:NewButton("Da Hood Modded", "Aim lock, Slient aim and more", function()
+        loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Rippeed/DaHoodinary/main/chariotsware"))()
+    end)
+
+    GamesSection:NewButton("Hoop Central 6", "Only shooting hack works", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ghostywinsgg/gtfhstd/main/krabs",true))();
+    end)
+	
+	
+
