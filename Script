@@ -26,6 +26,9 @@ end)
 tool.Parent = game.Players.LocalPlayer.Backpack
     end)
 
+	MainSection:NewKeybind("Close UI", "Closes UI click the same button to reopen", Enum.KeyCode.F, function()
+		Library:ToggleUI()
+	end)
 
     --LOCAL PLAYER
     local Player = Window:NewTab("Player")
@@ -55,7 +58,7 @@ tool.Parent = game.Players.LocalPlayer.Backpack
     end)
 
     GamesSection:NewButton("Tower Of Hell", "Tower of hell script with inf jump fly and more", function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/iiProductionz/Floater-Scripts/main/WaifuEdition/Tower%20Of%20Hell"))()
+        loadstring(game:HttpGet('https://pastebin.com/raw/BbVHjH56'))()
     end)
 
     GamesSection:NewButton("Tower Of Misery", "Tower of misery script with inf jump fly and more", function()
@@ -68,4 +71,12 @@ tool.Parent = game.Players.LocalPlayer.Backpack
 
     GamesSection:NewButton("Strucid", "The roblox fortnite hack lmao", function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/fusiongreg/BoltsHubV5/main/Main", true))()
+    end)
+
+    GamesSection:NewButton("Pet Sim X", "Auto farms auto collect and more", function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/BdvUGb2q"))()
+    end)
+
+    GamesSection:NewButton("MM2", "MM2 hack with aimlock and more", function()
+        loadstring(game:HttpGet(("https://raw.githubusercontent.com/TrixAde/scripts/main/MM2-Xenny-Ware.lua"), true))()
     end)
