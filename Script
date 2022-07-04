@@ -1,19 +1,21 @@
+-- I gotta organise this code
+
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("Praby's Universal Hub", "DarkTheme")
     -- MAIN
-    local Main = Window:NewTab("Main")
-    local MainSection = Main:NewSection("Main")
+    local General = Window:NewTab("General")
+    local GeneralSection = General:NewSection("General")
 
 
-    MainSection:NewButton("Inf Yeild", "A hub with FE scripts", function()
+    GeneralSection:NewButton("Inf Yeild", "A hub with FE scripts", function()
         loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
     end)
 
-    MainSection:NewButton("Anti AFK", "Won't kick you out of games", function()
+    GeneralSection:NewButton("Anti AFK", "Won't kick you out of games", function()
         loadstring(game:HttpGet("https://pastebin.com/raw/sDXcYFhR", true))()
     end)
 
-    MainSection:NewButton("Click TP Tool", "Will give a tool to TP", function()
+    GeneralSection:NewButton("Click TP Tool", "Will give a tool to TP", function()
         mouse = game.Players.LocalPlayer:GetMouse()
 tool = Instance.new("Tool")
 tool.RequiresHandle = false
@@ -25,22 +27,20 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
 end)
 tool.Parent = game.Players.LocalPlayer.Backpack
     end)
-
-	MainSection:NewKeybind("Close UI", "Closes UI click the same button to reopen", Enum.KeyCode.F, function()
-		Library:ToggleUI()
-	end)
-
-    --LOCAL PLAYER
-    local Player = Window:NewTab("Player")
-    local PlayerSection = Player:NewSection("Player")
-
-    PlayerSection:NewSlider("Walkspeed", "How fast you can run", 500, 16, function(s)
+   
+    GeneralSection:NewSlider("Walkspeed", "How fast you can run", 500, 16, function(s)
         game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
     end)
 
-    PlayerSection:NewSlider("Jumppower", "How high you can jump", 350, 50, function(s)
+    GeneralSection:NewSlider("Jumppower", "How high you can jump", 350, 50, function(s)
         game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
     end)
+	
+	GeneralSection:NewKeybind("Close UI", "Closes UI click the same button to reopen", Enum.KeyCode.F, function()
+		Library:ToggleUI()
+	end)
+
+
 
     local Games = Window:NewTab("Games")
     local GamesSection = Games:NewSection("Games")
@@ -80,3 +80,15 @@ tool.Parent = game.Players.LocalPlayer.Backpack
     GamesSection:NewButton("MM2", "MM2 hack with aimlock and more", function()
         loadstring(game:HttpGet(("https://raw.githubusercontent.com/TrixAde/scripts/main/MM2-Xenny-Ware.lua"), true))()
     end)
+
+    local Credits = Window:NewTab("Credits")
+    local CreditsSection = Credits:NewSection("Credits:")
+	local CreditsSection = Credits:NewSection("Made By: Praby#2726")
+	local CreditsSection = Credits:NewSection("UI Lib By: xHeptc")
+	local CreditsSection = Credits:NewSection("(This is just for people new to exploiting)")
+
+    local Devlog = Window:NewTab("Devlog")
+    local DevlogSection = Devlog:NewSection("Added devlog")
+	local DevlogSection = Devlog:NewSection("Added credits")
+	local DevlogSection = Devlog:NewSection("Added general section for more simplicity")
+	local DevlogSection = Devlog:NewSection("Date: July 4, 2022")
